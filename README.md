@@ -1,9 +1,9 @@
-# PROSDEV-Hangman
+# Hangman
+Hangman in C++, created for PROSDEV
 
-Members and Roles :
+## Folder structure
 
-Broqueza, Carlos (Build Master)
-Silverio, Jan (Communications)
-Planas, Nicole (Designer)
-Alcala, Christian (Programmer)
-Heo, Inseong (Quality Assurance)
+1. bin: The output executables go here.
+2. build: This folder contains all object files.
+3. include: All project header files
+4. src: The application and only the application’s source files.
