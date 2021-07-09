@@ -9,6 +9,20 @@
 #include "Puzzle.h"
 #include "LetterFunction.h"
 
+void header(){
+
+	printf("        _   _                  ___  ___            \n" );
+	printf( "       | | | |                 |  \\/  |            \n" );
+	
+	printf( "       | |_| | __ _ _ __   __ _| .  . | __ _ _ __  \n" );
+	printf( "       |  _  |/ _` | '_ \\ / _` | |\\/| |/ _` | '_ \\ \n" );
+	printf("       | | | | (_| | | | | (_| | |  | | (_| | | | |   \n"  );
+	printf("       \\_| |_/\\__,_|_| |_|\\__, \\_|  |_/\\__,_|_| |_| \n");
+	printf("                           __/ |                   \n");
+	printf("                          |___/                    \n");
+	
+}
+
 int drawhangman(int x){
 	if( x == 0){
 			printf(" +----+ \n");
@@ -86,13 +100,15 @@ int drawhangman(int x){
 }
 int main(int argc, char** argv)
 {	
+
+	
 	srand(time(NULL));
 	Puzzle p("dictionary_many.txt");	
 	std::string strInput;
 	// p.displayWordList();                      //uncomment to see the word list loaded for the game
 	LetterFunction *lf = new LetterFunction();
 	int tries = 0;
-		system("cls");
+//		system("cls");
 		
 	while(p.isGame())
 	{	
@@ -108,6 +124,7 @@ int main(int argc, char** argv)
 //			drawhangman(tries);
 			system("cls");
 			std::cout << std::string(75, '\n');	
+			header();
 			drawhangman(tries);
 			std::cout << "Hangman! Current Lives: " << p.getLives() << " | wins: "<< p.getWins() << " | losses: " << p.getLosses() << "\n\n";
 			p.displayPuzzleString();
