@@ -24,17 +24,17 @@ void header(){
 }
 
 int drawhangman(int x){
-	if( x == 0){
-			printf(" +----+ \n");
-			printf(" |      \n");
-			printf(" | \n");
-			printf(" | \n");
-			printf(" |      \n");
-			printf(" |      \n");
-			printf("============= \n");
-	}
+//	if( x == 0){
+//			printf(" +----+ \n");
+//			printf(" |      \n");
+//			printf(" | \n");
+//			printf(" | \n");
+//			printf(" |      \n");
+//			printf(" |      \n");
+//			printf("============= \n");
+//	}
 		
-	if(x==1){
+	if(x==0){
 			printf(" +----+ \n");
 			printf(" |    |  \n");
 			printf(" | \n");
@@ -115,7 +115,7 @@ int main(int argc, char** argv)
 //		system("cls");	
 		p.initPuzzle();
 		tries=0;
-		drawhangman(tries);
+	//	drawhangman(tries);
 		system("cls");
 						
 		while (p.isGame() && p.isAlive() && !p.isWin() )
